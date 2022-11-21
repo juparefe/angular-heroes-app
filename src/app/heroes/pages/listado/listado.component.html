@@ -1,1 +1,10 @@
-<p>listado works!</p>
+<h1>Listado de heroes</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div class="parent">
+    <div *ngFor="let heroe of heroes" class="card">
+        <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta>
+    </div>
+    
+</div>
