@@ -1,0 +1,21 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+img {
+    max-width: 50vw;
+    max-height: 90vh;
+    border-radius: 5px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .parent {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+    img {
+        max-width: 100%;
+    }
+  }

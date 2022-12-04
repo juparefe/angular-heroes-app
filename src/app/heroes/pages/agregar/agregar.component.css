@@ -1,0 +1,36 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 1%;
+}
+
+input {
+    width: 100%
+}
+
+@media screen and (max-width: 600px) {
+    .parent {
+        flex-direction: column;
+      }
+    .card {
+        width: 98%;
+    
+    }
+    img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+    .button-container {
+        flex-direction: column;
+    }
+    button {
+        margin: 1%;
+    }
+  }

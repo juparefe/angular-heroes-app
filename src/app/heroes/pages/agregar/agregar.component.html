@@ -1,1 +1,53 @@
-<p>agregar works!</p>
+<h1>
+    {{(heroe.id) ? 'Editar' : 'Nuevo'}}
+    Heroe 
+    <small>{{heroe.superhero}}</small>
+</h1>
+<div class="parent">
+    <div class="card">
+        <mat-form-field>
+            <mat-label>Super Heroe</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.superhero" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Alter Ego</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.alter_ego" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Primera aparicion</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.first_appearance" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Personajes</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.characters" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Creador</mat-label>
+            <mat-select required>
+                <mat-option *ngFor="let publisher of publishers" [value]="publisher.id">
+                    {{publisher.description}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Foto URL</mat-label>
+            <input matInput
+                   type="url"
+                   [(ngModel)]="heroe.alt_img"
+                   required>
+        </mat-form-field>  
+        <div class="button-container">
+            <button mat-raised-button color="primary" (click)="guardar()">
+                <mat-icon>edit</mat-icon>
+                {{(heroe.id) ? 'Actualizar' : 'Guardar'}}
+            </button>
+            <button mat-raised-button color="warn" (click)="borrar()" *ngIf="heroe.id">
+                <mat-icon>remove</mat-icon>
+                Borrar
+            </button>
+        </div>
+    </div>
+    <div class="card">
+        <img [src]="heroe | imagen">
+    </div>
+</div>
