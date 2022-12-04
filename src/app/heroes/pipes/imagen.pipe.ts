@@ -8,13 +8,10 @@ import { Heroe } from "../interfaces/heroes.interface";
 export class ImagenPipe implements PipeTransform{
     transform( heroe: Heroe ): string {
         if( !heroe.id && !heroe.alt_img ) {
-            console.log('primer if')
             return 'assets/no-image.png';
           } else if ( heroe.alt_img ) {
-            console.log('segundo if')
             return heroe.alt_img;
           } else {
-            console.log('else')
             return `assets/heroes/${ heroe.id }.jpg`;
           }        
     }
