@@ -1,42 +1,29 @@
-<ul>
-    <li>
-        <a routerLink="/auth/login">
-            Ir al login
-        </a>
-    </li>
-    <li>
-        <a routerLink="/auth/registro">
-            Ir al registro
-        </a>
-    </li>
-    <li>
-        <a routerLink="/heroes/listado">
-            Ir al listado
-        </a>
-    </li>
-    <li>
-        <a routerLink="/heroes/agregar">
-            Ir a agregar
-        </a>
-    </li>
-    <li>
-        <a routerLink="/heroes/editar:id">
-            Ir a editar
-        </a>
-    </li>
-    <li>
-        <a routerLink="/heroes/buscar">
-            Ir a buscar
-        </a>
-    </li>
-    <li>
-        <a routerLink="/heroes/:id">
-            Ir a un heroe
-        </a>
-    </li>
-    <li>
-        <a routerLink="/heroes/dobncdwsjvc">
-            Ir al comodin
-        </a>
-    </li>
-</ul>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Ups!! la ruta que escogiste no existe
+        </mat-card-title>
+        <mat-card-subtitle>   
+            Pero puedes elegir navegar hacia alguna de las siguientes rutas:
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item routerLink="/auth/login">
+                <mat-icon matListItemIcon>login</mat-icon>
+                <div matListItemTitle>Ir al login</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item routerLink="/auth/registro">
+                <mat-icon matListItemIcon>person</mat-icon>
+                <div matListItemTitle>Ir al registro de usuarios</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item routerLink="/heroes/listado">
+                <mat-icon matListItemIcon>list</mat-icon>
+                <div matListItemTitle>Ir al listado de heroes</div>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
